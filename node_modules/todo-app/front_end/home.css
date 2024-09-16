@@ -1,0 +1,93 @@
+#container {
+    margin: 0 auto;
+    width: 50%;
+    min-width: 600px;
+    border:1px solid black;
+    padding: 20px;
+}
+
+#header {
+    background-color: #386599;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+#itemInput {
+    border: none;
+    width: 55%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.fa-close {
+    cursor: pointer;
+    float: right;
+    padding-right: 5px;
+}
+
+#addBtn {
+    background-color: #4CAF50;
+    cursor: pointer;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#addBtn:disabled {
+    background: #DCDAD1;
+    cursor: not-allowed;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 600px;
+    height: 600px;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+li {
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+ul li.done {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+ul li:hover {
+  background: #ddd;
+}

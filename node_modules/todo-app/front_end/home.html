@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="home.js"></script>
+    <head>
+        <link rel="stylesheet" type="text/css" href="home.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body ng-app="todoApp" ng-controller="todoCtrl">
+        <div id="container">
+            <div id="header">
+                <h2>Teamjoly Todo List</h2>
+                <form ng-submit="todoAdd()">
+                    <input id="itemInput" type="text" ng-model="todoInput" size="50" placeholder="Add...">
+                    <button ng-disabled="!todoInput" type="submit" id="addBtn">Create</button>
+                </form>
+            </div>
+            <ul>
+                <li ng-repeat="x in todoList" ng-class="{done: x.done}">
+                    <input type="checkbox" ng-model="x.done" ng-click="markTodoComplete($index)" title="Mark Item as Complete"> <span ng-bind="x.todoText"></span>
+                    <i ng-click="remove($index)" class="fa fa-close" title="Click here to close off Item"></i>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
